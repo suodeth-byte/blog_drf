@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>`Blog Posts`</h1>
+
+<ul>
+{% for post in posts %}
+    <li><hr><a href="{% url 'article-detail' post.pk %}" class="btn btn-outline-dark">{{ post.title }} | {{ post.author.first_name }}</a><br>
+        {{ post.author.email }}<br>
+    {{ post.content}}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

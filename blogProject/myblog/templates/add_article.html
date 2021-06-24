@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Add an article</h1>
+<hr/><br/>
+<form method="POST" >
+<!--        {% csrf_token %}-->
+        {{ form }}
+
+    <button class="btn btn-secondary">Post</button>
+
+</form>
+
+
+
+{% endblock %}
